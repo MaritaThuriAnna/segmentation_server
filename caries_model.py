@@ -47,7 +47,7 @@ tooth_name_mapping = {
 
 
 # Caries detection function (U-Net++)
-def test_caries_detection_highlight_only(image, model_path='/home/annamarita/mysite/models/best_model4.pth',
+def test_caries_detection_highlight_only(image, model_path='/app/models/best_model4.pth',
                                          threshold=0.05, crop=True):
     DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -123,8 +123,8 @@ def test_caries_detection_highlight_only(image, model_path='/home/annamarita/mys
 
 
 # Main function to detect teeth and caries
-def detect_caries_and_teeth(image_input, yolo_model_path='/home/annamarita/mysite/models/best.pt',
-                            caries_model_path='/home/annamarita/mysite/models/best_model4.pth', threshold=0.01):
+def detect_caries_and_teeth(image_input, yolo_model_path='/app/models/best.pt',
+                            caries_model_path='/app/models/best_model4.pth', threshold=0.01):
     """
     Detect teeth and caries in an X-ray image.
 

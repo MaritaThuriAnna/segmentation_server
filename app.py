@@ -88,8 +88,8 @@ async def detect_caries(file: UploadFile = File(...)):
         # Run the caries detection using the models
         result = detect_caries_and_teeth(
             image_input=file_path,
-            yolo_model_path='/home/annamarita/mysite/models/best.pt',  # Updated path for PythonAnywhere
-            caries_model_path='/home/annamarita/mysite/models/best_model4.pth',  # Updated path
+            yolo_model_path='/app/models/best.pt',
+            caries_model_path='/app/models/best_model4.pth',
             threshold=0.01
         )
 
